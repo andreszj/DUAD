@@ -1,0 +1,45 @@
+**Cree un algoritmo para ver un video en Youtube. Sea lo más especifico posible.**
+
+1. Inicio
+
+2. Buscar dispositivo electrónico con capacidad de conectarse a internet
+
+3. Verificar conexión a red del dispositivo
+
+4. Mientras no tenga acceso a internet:
+
+a. Si es conectividad por medio de wifi:
+
+i. Ir a configuraciones
+
+ii. Conectividad
+
+iii. Wifi
+
+iv. Seleccionar Wifi On
+
+v. Seleccionar red
+
+b. Sino, si es conectividad por medio de cable Ethernet
+
+i. Verificar existencia conexión física del cable Ethernet desde router o modem al dispositivo
+
+5. Si es computadora
+
+a. Abrir navegador
+
+b. Entrar a [www.youtube.com](http://www.youtube.com/)
+
+6. Sino, si es smartphone, Tablet o Smart TV
+
+a. Abrir App YOUTUBE
+
+7. Buscar video por medio de barra de búsqueda
+
+8. Seleccionar video
+
+9. Reproducir
+
+a. Darle clic al botón de “play”
+
+10. Fin

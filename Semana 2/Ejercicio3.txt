@@ -1,0 +1,17 @@
+Cree un algoritmo que le pida un numero al usuario y muestre la suma de todos los números desde 1 hasta ese número.
+
+1. Inicio
+2. Definir `Numero`
+3. Definir `Sumatoria`
+4. Definir `Contador`
+5. Mostrar “Ingrese un numero”
+6. Pedir `Numero`
+7. `Sumatoria`=0
+8. `Contador`=1
+9. Mientras (`Contador<=Numero`) hacer:
+    1. `Sumatoria`=`Sumatoria`+`Contador`
+    2. `Contador`=`Contador`+1
+10. FinMientras
+11. Mostrar “La suma de todos los numeros desde 1 hasta el numero indicado es”
+12. Mostrar `Sumatoria`
+13. Fin

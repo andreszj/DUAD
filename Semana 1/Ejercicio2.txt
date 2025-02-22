@@ -1,0 +1,184 @@
+**Cree un algoritmo que describa su rutina diaria. Use condiciones, condiciones multiples y ciclos.**
+
+1. Inicio
+2. Mientras no suena la alarma:
+
+a. Seguir durmiendo
+
+3. Despertarse
+4. Apagar Alarma
+
+a. Agarrar smartphone
+b. Darle Silenciar
+c. Ponerlo de regreso en mesa de noche
+
+5. Levantarse de la cama
+6. Ponerse sandalias
+7. Buscar ropa para vestir ese día
+
+a. Dirigirse al armario
+b. Buscar ropa
+c. Cerrar armario
+
+8. Dirigirse al baño con la ropa en mano.
+
+a. Colocar ropa en mueble de baño
+b. Si hay paño disponible:
+
+i. Bañarse
+
+c. Sino:
+
+i. Buscar paño y colocarlo donde va
+ii. Bañarse
+
+d. Salir del baño
+e. Secarse
+f. Vestirse
+
+9. Ponerse los zapatos
+
+a. Si tengo medias y zapatos:
+
+i. Ponerme las medias
+ii. Luego ponerme los zapatos
+
+b. Sino tengo medias:
+
+i. Buscar medias
+ii. Ponerme las medias
+iii. Luego ponerme los zapatos
+
+10. Peinarme
+11. Ponerme colonia y desodorante.
+12. Tomar accesorios personales (celular, billetera, llaves casa y auto).
+13. Dirigirme a la cocina
+
+a. Preparar Café
+
+i. Poner café en polvo en coffee maker
+ii. Poner agua en reservorio
+iii. Encender Coffe maker
+
+b. Preparar Desayuno
+
+i. Tomar pan
+ii. Ponerlo en la tostadora
+iii. Encender tostadora
+
+c. Buscar taza
+d. Servirme el café
+e. Buscar plato
+f. Servirme el pan tostado
+
+14. Desayunar
+15. Lavar trastes utilizados
+
+a. Mientras los trastes utilizados no estén limpios:
+
+i. Lavar con agua y jabón
+
+b. Colocarlos en escurridor de trastes
+
+16. Lavarme los dientes
+
+a. Ir al baño
+b. Buscar cepillo de dientes
+c. Colocar pasta
+d. Lavar
+
+17. Despedirme de mi pareja
+18. Dirigirme al garaje
+
+a. Subirme a mi vehículo
+b. Abrir garaje
+c. Arrancar vehículo
+d. Sacarlo de garaje
+e. Cerrar garaje	
+f. Si el vehículo tiene combustible:	
+
+i. Dirigirme a mi trabajo
+
+g. Sino:
+
+i. Dirigirme a la gasolinera más cercana
+ii. Llenar tanque de combustible
+iii. Dirigirme a mi trabajo
+
+19. Parquear vehículo en parqueo de empresa
+20. Bajarme
+21. Buscar computadora y artículos de trabajo en la cajuela
+22. Poner seguro al vehículo
+23. Caminar a oficina
+24. Preparar escritorio
+25. Trabajar
+
+a. Mientras sea antes de las 5 pm:
+
+i. Por cada correo dirigido a mí
+
+i.1 Analizar la consulta
+i.2 Responder
+i. 3 Solucionar atención
+
+ii. Por cada equipo reportado
+
+ii.1 Definir prioridad de atención
+ii.2 Asignar a técnico para verificación
+
+iii. Revisar otros pendientes
+iv. Atender reuniones
+
+26. Tomar computadora y artículos
+27. Caminar al parqueo
+28. Desbloquear vehículo
+29. Colocar pertenencias en la cajuela
+30. Subirme al vehículo
+
+a. Arrancar
+b. Conducir de vuelta a casa
+
+31. Abrir garaje
+32. Ingresar vehículo
+33. Apagar vehículo
+34. Cerrar garaje
+35. Entrar a casa
+
+a. Saludar a los presentes
+b. Mientras no sea hora de cenar o ir a dormir:
+
+i. Ver trabajos del hogar pendientes por realizar
+
+i.1 Si hay algún pendiente:	
+
+- Realizarlos
+
+i.2 Sino:
+
+- Ver series de TV o estudiar
+
+36. Si es hora de cenar o son las 8 pm y tengo hambre:
+
+a. Cenar
+
+37. Sino:
+
+a. Lavarme los dientes
+b. Colocarme ropa de dormir
+
+38. Ir a la cama
+39. Colocar pertenencias en mesa de noche
+40. Acostarme en la cama
+41. Leer un libro
+
+a. Mientras no sea la hora de dormir:
+
+i. Retomar lectura
+
+b. Cerrar libro
+c. Guardarlo
+
+42. Programar alarma
+43. Apagar luces
+44. Dormir
+45. Fin
