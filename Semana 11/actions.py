@@ -1,14 +1,14 @@
 import os
 
 class Student:
-    def __init__(self, name, seccion, spanish, english, sociales, ciencias):
+    def __init__(self, name, section, spanish, english, history, sciences):
         self.name = name
-        self.seccion = seccion
+        self.section = section
         self.spanish = spanish
         self.english = english
-        self.sociales = sociales
-        self.ciencias = ciencias
-        self.average = ((spanish + english + sociales + ciencias)/4)
+        self.history = history
+        self.sciences = sciences
+        self.average = ((spanish + english + history + sciences)/4)
 
 def is_not_integer (number):
     error_int = True
@@ -64,20 +64,20 @@ def is_not_valid_menu_option (number):
 def add_info () :
     
     name = input('Ingrese nombre del estudiante: ')
-    seccion = input('Ingrese seccion del estudiante: ')
+    section = input('Ingrese seccion del estudiante: ')
     spanish = input('Ingrese nota de Espanol del estudiante: ')
     spanish = is_not_integer(spanish)
     spanish = is_not_valid_grade (spanish)
     english = input('Ingrese nota de Ingles del estudiante: ')
     english = is_not_integer(english)
     english = is_not_valid_grade (english)
-    sociales = input('Ingrese nota de Sociales del estudiante: ')
-    sociales = is_not_integer(sociales)
-    sociales = is_not_valid_grade (sociales)
-    ciencias = input('Ingrese nota de Ciencias del estudiante: ')
-    ciencias = is_not_integer(ciencias)
-    ciencias = is_not_valid_grade (ciencias)
-    new_student = Student (name,seccion,spanish,english,sociales,ciencias)
+    history = input('Ingrese nota de Sociales del estudiante: ')
+    history = is_not_integer(history)
+    history = is_not_valid_grade (history)
+    sciences = input('Ingrese nota de Ciencias del estudiante: ')
+    sciences = is_not_integer(sciences)
+    sciences = is_not_valid_grade (sciences)
+    new_student = Student (name,section,spanish,english,history,sciences)
     return new_student
 
 # def calculate_average (students_list):

@@ -1,12 +1,12 @@
-class Circle:
-    radius = 0
-    def get_area(self,radius):
-        self.area = radius*radius*3.14
-        print(f'Este es el radio: {radius} y esta es el area del circulo {self.area}')
+import math
 
-area1 = Circle ()
-area2 = Circle ()
-area1.radius = 5
-area2.radius = 2
-area1.get_area(area1.radius)
-area2.get_area(area2.radius)
+class Circle:
+    def get_area(self,radius):
+        self.radius = radius 
+        return self.radius*self.radius*math.pi
+        
+
+area = Circle()
+
+print (f'Area del circulo 1 es: {area.get_area(5)}')
+print (f'Area del circulo 2 es: {area.get_area(2)}')
