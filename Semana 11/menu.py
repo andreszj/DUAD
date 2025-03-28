@@ -6,13 +6,13 @@ def print_menu() :
     print ('===================MENU======================')
 
     print ('''
-    1. Ingresar nuevo estudiante
-    2. Ver informacion de todos los estudiantes
-    3. Ver top 3 de estudiantes
-    4. Ver promedio de notas
-    5. Exportar datos actuales
-    6. Importar datos previos
-    7. Salir''')
+    1. Add new student
+    2. Show Students information
+    3. Show Top 3 
+    4. Show average grades
+    5. Export data
+    6. Import data
+    7. Exit''')
 
     print ('=============================================')
 
@@ -22,7 +22,7 @@ def menu_options ():
     students_list = []    
 
     while (Again):
-        option = input ('Ingrese una opcion del menu: ')
+        option = input ('Enter a menu option: ')
         option = actions.is_not_integer(option)
         option = actions.is_not_valid_menu_option (option)
 
@@ -32,29 +32,27 @@ def menu_options ():
             students_list.append(actions.add_info ())
         elif (option == 2):
             for item in students_list:
-                print (f'Nombre: {item.name}')
-                print (f'Seccion: {item.seccion}')
-                print (f'Nota Espanol {item.spanish}')
-                print (f'Nota Ingles: {item.english}')
-                print (f'Nota Sociales: {item.sociales}')
-                print (f'Nota Ciencias: {item.ciencias}')
-                # for key in item:
-                #     print (f'{key} : {item[key]}')
+                print (f'Name: {item.name}')
+                print (f'Section: {item.section}')
+                print (f'Spanish grade {item.spanish}')
+                print (f'English grade: {item.english}')
+                print (f'History grade: {item.history}')
+                print (f'Science grade: {item.science}')
                 print ('----------------------')
-            input ('Presionar [ENTER] para continuar ')
+            input ('Push [ENTER] to continue ')
 
         elif (option == 3):
             actions.top_students (students_list)
-            input ('Presionar [ENTER] para continuar ')
+            input ('Push [ENTER] to continue ')
         elif (option == 4):
             actions.calculate_total_average (students_list)
-            input ('Presionar [ENTER] para continuar ')
+            input ('Push [ENTER] to continue ')
         elif (option == 5):
             data.export_csv(file_path, students_list)
-            input ('Datos exportados... Presionar [ENTER] para continuar')
+            input ('Data exported... Push [ENTER] to continue')
         elif (option == 6):
             students_list.extend(data.import_csv(file_path))
-            input ('Datos importados... Presionar [ENTER] para continuar')
+            input ('Data imported... Push [ENTER] to continue')
         elif (option == 7):
             Again = False
         

@@ -1,14 +1,14 @@
 import os
 
 class Student:
-    def __init__(self, name, section, spanish, english, history, sciences):
+    def __init__(self, name, section, spanish, english, history, science):
         self.name = name
         self.section = section
         self.spanish = spanish
         self.english = english
         self.history = history
-        self.sciences = sciences
-        self.average = ((spanish + english + history + sciences)/4)
+        self.science = science
+        self.average = ((spanish + english + history + science)/4)
 
 def is_not_integer (number):
     error_int = True
@@ -21,7 +21,7 @@ def is_not_integer (number):
 
         except ValueError:
             # os.system('cls')
-            number = input (f'[   {number}   ] Opción inválida 1, ingrese nuevamente el numero >>>   ')
+            number = input (f'[   {number}   ] Invalid option. Please add the number again >>>   ')
 
 def is_not_valid_grade (grade):
     error_grade = True
@@ -31,7 +31,7 @@ def is_not_valid_grade (grade):
                 return grade
                 error_grade = False
             else:
-                raise ValueError ('Nota inválida 2, ingrese nota nuevamente >>>   ')
+                raise ValueError ('Invalid Grade. Please add the grade again >>>   ')
         except ValueError as ex: 
             grade = input (ex)
             grade = is_not_integer(grade)
@@ -44,52 +44,31 @@ def is_not_valid_menu_option (number):
                 return number
                 error_option = False
             else:
-                raise ValueError ('Opción inválida 3, ingrese opcion nuevamente >>>   ')
+                raise ValueError ('Invalid option. Please add option again >>>   ')
         except ValueError as ex:
             number = input (ex)
             number = is_not_integer(number)
 
-# def add_info (student_header) :
-#     new_student = {}
-#     for key in student_header.keys ():
-#         if (key == 'Nota Espanol' or key == 'Nota Ingles' or key == 'Nota Sociales' or key == 'Nota Ciencias'):
-#             info_aux = input(f'Ingrese {key} del estudiante: ')
-#             info_aux = is_not_integer(info_aux)
-#             info_aux = is_not_valid_grade (info_aux)
-#             new_student[key] = info_aux
-#         else:
-#             new_student[key] = input(f'Ingrese {key} del estudiante: ')
-#     return new_student
+
 
 def add_info () :
     
-    name = input('Ingrese nombre del estudiante: ')
-    section = input('Ingrese seccion del estudiante: ')
-    spanish = input('Ingrese nota de Espanol del estudiante: ')
+    name = input('Enter the student s name: ')
+    section = input('Enter the student s section: ')
+    spanish = input('Enter Spanish grade: ')
     spanish = is_not_integer(spanish)
     spanish = is_not_valid_grade (spanish)
-    english = input('Ingrese nota de Ingles del estudiante: ')
+    english = input('Enter English grade: ')
     english = is_not_integer(english)
     english = is_not_valid_grade (english)
-    history = input('Ingrese nota de Sociales del estudiante: ')
+    history = input('Enter History grade: ')
     history = is_not_integer(history)
     history = is_not_valid_grade (history)
-    sciences = input('Ingrese nota de Ciencias del estudiante: ')
-    sciences = is_not_integer(sciences)
-    sciences = is_not_valid_grade (sciences)
-    new_student = Student (name,section,spanish,english,history,sciences)
+    science = input('Enter Science grade: ')
+    science = is_not_integer(science)
+    science = is_not_valid_grade (science)
+    new_student = Student (name,section,spanish,english,history,science)
     return new_student
-
-# def calculate_average (students_list):
-#     average_list = []
-
-#     for index in range (0 , len (students_list)):
-#         student_average = {
-#             'Nombre completo' : students_list[index]['Nombre completo'],
-#             'Promedio de Notas' : (int(students_list[index]['Nota Espanol']) + int(students_list[index]['Nota Ingles']) + int(students_list[index]['Nota Sociales']) + int(students_list[index]['Nota Ciencias']))/4,
-#         }
-#         average_list.append(student_average)
-#     return average_list
 
 
 def calculate_total_average (student_list) :
@@ -98,7 +77,7 @@ def calculate_total_average (student_list) :
     for index in range (0 , qty):
         total_average = student_list[index].average + total_average
     total_average = total_average / qty
-    print (f'PROMEDIO DE PROMEDIOS: {total_average}')
+    print (f'Average of the averages: {total_average}')
     return total_average 
 
 
@@ -115,8 +94,8 @@ def top_students (student_list):
         if not inserted:
             aux_list.append(item)
     top_list.extend([aux_list[0], aux_list[1], aux_list[2]])
-    print(f'Este es TOP3: ')
+    print(f'TOP3: ')
     print ('----------------------')
     for item in top_list:
-        print (f'Nombre del estudiante: {item.name} Promedio: {item.average}')
+        print (f'Student Name: {item.name} Average: {item.average}')
         print ('----------------------')

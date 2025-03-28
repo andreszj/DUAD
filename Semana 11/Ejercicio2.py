@@ -16,9 +16,9 @@ class Bus:
     def add_passenger(self, person):
         if self.qty_passenger() < self.max_passengers:
             self.passenger.append (person)
-            print (f'Se subio pasajero: {person.name}')
+            print (f'The passenger named {person.name} got on')
         else:
-            print (f'Este pasajero no cabe: {person.name}')
+            print (f'There is no space for: {person.name}')
         
     def drop_off_passenger (self, person):
         eliminated = False
@@ -26,27 +26,27 @@ class Bus:
             if item == person:
                 self.passenger.pop(index)
                 eliminated = True
-                print (f'Se bajo pasajero: {person.name}')
+                print (f'The passenger named {person.name} got off')
         if eliminated == False :
-            print (f'Pasajero no esta en el bus')
+            print (f'This person is not on the bus')
 
 passenger1 = Person('Pedro')
 passenger2 = Person('Juan')
 passenger3 = Person('Brayan')
 
-Bus1 = Bus(2) # se indica numero maximo de pasajeros
+Bus1 = Bus(2) # The maximum number of passenger is indicated
 
-# se suben pasajeros
+# Passenger got on
 
 Bus1.add_passenger(passenger1) 
 Bus1.add_passenger(passenger2)
 Bus1.add_passenger(passenger3)
 
-# se bajan pasajeros
+# Passenger got off
 
 Bus1.drop_off_passenger(passenger2)
 
-# se indican los pasajeros finales
-print ('Pasajeros en el bus:')
+# Final passengers on the bus are indicated
+print ('Passengers on the bus:')
 for item in Bus1.passenger:
     print (f'{item.name}')
