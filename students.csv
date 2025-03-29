@@ -1,5 +1,10 @@
-Nombre completo,Seccion,Nota Espanol,Nota Ingles,Nota Sociales,Nota Ciencias
-Pedro,11b,67,78,89,8
-Juan,45,56,78,67,80
-Casas,fg,56,78,56,43
-Susan,12,100,100,100,100
+Full name,Section,Spanish grade,English grade,History grade,Science grade,Average
+
+Andres,11b,89,89,78,89,86.25
+
+Denis,67,78,98,80,56,78.0
+
+Brayan,12,78,78,78,78,78.0
+
+Susan,100,100,100,100,100,100.0
+
