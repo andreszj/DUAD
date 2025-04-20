@@ -2,15 +2,23 @@ from datetime import date
 
 def decorator (func):
     def wrapper (user):
+        # is_adult = True
         try:
             if (user.age > 18):
+                # is_adult = True
                 print ('Person is of legal age')
+                user_age = func(user)
+                print (f'His/Her age is: {user_age}')
             else:
+                # is_adult = False
                 raise ValueError()
         except ValueError:
             print ('Person is minor')
 
-        func(user)
+        # if (is_adult):
+        #     user_age = func(user)
+        #     print (f'Your age is: {user_age}')
+        # func(user)
 
     return wrapper
 
@@ -36,9 +44,16 @@ class User:
 
 @decorator
 def print_user_age (user):
-    print (f"Age: {user.age}")
+    return user.age
+    # print (f"Age: {user.age}")
 
 
 my_user = User(date(1990, 1, 1))
 
+print('\n')
 print_user_age (my_user)
+
+my_user_2 = User(date(2015, 1, 1))
+
+print('\n')
+print_user_age (my_user_2)

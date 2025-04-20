@@ -1,11 +1,11 @@
 # Cree un decorador que se encargue de revisar si todos los parámetros de la función que decore son números, y arroje una excepción de no ser así.
 
 def decorator(func):
-    def wrapper (*args):
+    def wrapper (*args, **kwargs):
         run_function = True
         for item in args:
             try:
-                if (float (item)):
+                if (isinstance (item, (int, float))):
                     print (item)
                 else:
                     raise ValueError()
@@ -14,9 +14,20 @@ def decorator(func):
                 print(f'Parameter is not a number: {item}')
                 print('Impossible to execute function')
 
+            for key, value in kwargs.items():
+                try:
+                    if isinstance(value, (int, float)):
+                        print(f'{key} : {value}')
+                    else:
+                        raise ValueError()
+                except ValueError:
+                    run_function = False
+                    print(f'Parameter {key} is not a number: {value}')
+                    print('Impossible to execute function')
+
         if (run_function != False):
-            func(*args)
-            print(f'AVERAGE: {func(*args)}')
+            variable_returned = func(*args)
+            print(f'AVERAGE: {variable_returned}')
 
     return wrapper
 

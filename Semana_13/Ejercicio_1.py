@@ -3,8 +3,8 @@
 def decorator(func):
     def wrapper(*args):
         print(f'Parameters added: {args}')
-        func(*args)
-        print(func(*args))
+        variable_returned = func(*args)
+        print(variable_returned)
 
     return wrapper
 
