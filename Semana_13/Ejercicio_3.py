@@ -9,11 +9,13 @@ def decorator (func):
                 print ('Person is of legal age')
                 user_age = func(user)
                 print (f'His/Her age is: {user_age}')
+                return user_age
             else:
                 # is_adult = False
                 raise ValueError()
         except ValueError:
             print ('Person is minor')
+            return
 
         # if (is_adult):
         #     user_age = func(user)

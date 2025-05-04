@@ -5,6 +5,7 @@ def decorator(func):
         print(f'Parameters added: {args}')
         variable_returned = func(*args)
         print(variable_returned)
+        return variable_returned
 
     return wrapper
 

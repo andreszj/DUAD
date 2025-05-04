@@ -14,20 +14,21 @@ def decorator(func):
                 print(f'Parameter is not a number: {item}')
                 print('Impossible to execute function')
 
-            for key, value in kwargs.items():
-                try:
-                    if isinstance(value, (int, float)):
-                        print(f'{key} : {value}')
-                    else:
-                        raise ValueError()
-                except ValueError:
-                    run_function = False
-                    print(f'Parameter {key} is not a number: {value}')
-                    print('Impossible to execute function')
+        for key, value in kwargs.items():
+            try:
+                if isinstance(value, (int, float)):
+                    print(f'{key} : {value}')
+                else:
+                    raise ValueError()
+            except ValueError:
+                run_function = False
+                print(f'Parameter {key} is not a number: {value}')
+                print('Impossible to execute function')
 
         if (run_function != False):
-            variable_returned = func(*args)
+            variable_returned = func(*args, **kwargs)
             print(f'AVERAGE: {variable_returned}')
+            return variable_returned
 
     return wrapper
 
