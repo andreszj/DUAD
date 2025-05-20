@@ -15,6 +15,8 @@ class BinaryTree:
         self.root = root
 
     def print_structure(self, node = None):
+        if self.root is None:
+            print('Binary Tree is empty')
 
         if node is None:
             node = self.root
