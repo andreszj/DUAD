@@ -12,16 +12,16 @@ def check_if_lists_have_an_equal(list_a, list_b):   # O(n^2)
 				
 	return False    # O(1)
 
-def print_10_or_less_elements(list_to_print):   # O(n)
+def print_10_or_less_elements(list_to_print):   # O(1)
 	list_len = len(list_to_print)   # O(1)
-	for index in range(min(list_len, 10)):  # O(n)
+	for index in range(min(list_len, 10)):  # O(1)
 		print(list_to_print[index])     # O(1)
 
-def generate_list_trios(list_a, list_b, list_c):    # O(n^3)
+def generate_list_trios(list_a, list_b, list_c):    # O(axbxc)
 	result_list = []    # O(1)
-	for element_a in list_a:    # O(n^3)
-		for element_b in list_b:    # O(n^2)
-			for element_c in list_c:    # O(n)
+	for element_a in list_a:    # O(a)
+		for element_b in list_b:    # O(b)
+			for element_c in list_c:    # O(c)
 				result_list.append(f'{element_a} {element_b} {element_c}')  # O(1)
 				
 	return result_list # O(1)
