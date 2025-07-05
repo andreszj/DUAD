@@ -1,3 +1,4 @@
 Name,Account Number,#,Category,Title,Expense,Income
-Andres,020891,1,Salary,TT,0,15000.0
-Andres,020891,1,School,University,1000.0,0
+Andres,020891,1,Salary,FFF,0,15000.0
+Andres,020891,2,School,University,550.0,0
+Andres,020891,3,Other,Uber,0,1000.0

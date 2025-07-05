@@ -109,6 +109,8 @@ def decode_imported_account_activity(data_imported, file_path):
         account.reset(name,account_number,balance)
         account.transaction = data_imported
 
+        account.count = int(data_imported[index]['#'])
+
     else:
         account = Account('','',0)
     
