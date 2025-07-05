@@ -91,12 +91,16 @@ def new_user_window():
         
         elif event == '-ACCEPT BUTTON-':
 
-            data.save_files_and_activity(file_list, account)
+            # data.save_files_and_activity(file_list, account)
 
             customer =  values ['-NAME-']
             number_of_processes = values ['-ACCOUNT-']
             account.reset(customer,number_of_processes,0)
-            
+            if account.transaction == []:
+                break
+            else:
+                data.save_files_and_activity(file_list, account)
+
             break
 
     window.close()
