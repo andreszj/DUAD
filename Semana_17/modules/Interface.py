@@ -20,13 +20,13 @@ account = logic.decode_imported_account_activity(data_imported, file_path)
 
 # GUI Windows:
 
-def is_not_a_number_window():
+def is_not_a_positive_number_window():
 
     sg.theme('Reddit')
 
     layout= [
     [sg.Text('The amount must be entered in')],
-    [sg.Text('numeric format.')],
+    [sg.Text('numeric format and must be positive.')],
     [sg.Button('Accept', size = (15,1),pad=(1,10),key="-ACCEPT BUTTON-")],
     ]
     
@@ -93,7 +93,7 @@ def new_user_window():
 
             # data.save_files_and_activity(file_list, account)
 
-            customer =  values ['-NAME-']
+            customer =  values ['-NAME-'].title()
             number_of_processes = values ['-ACCOUNT-']
             account.reset(customer,number_of_processes,0)
             if account.transaction == []:
@@ -167,19 +167,20 @@ def category_window():
             break
 
         elif event == '-ADD BUTTON-':
-
-            new_category = values ['-NEW CATEGORY-']
             
-            categories.add_new_data(new_category)
-            categories.sort_data_list()
+            new_category = values ['-NEW CATEGORY-'].title()
+            if new_category.isalnum():
+                
+                categories.add_new_data(new_category)
+                categories.sort_data_list()
 
-            list_categories = logic.decode_list_to_print(categories.data_list)
-        
-            window['-TABLE-'].update(list_categories) 
-            window['-NEW CATEGORY-'].update('')
+                list_categories = logic.decode_list_to_print(categories.data_list)
+            
+                window['-TABLE-'].update(list_categories) 
+                window['-NEW CATEGORY-'].update('')
         
         elif event == '-ACCEPT BUTTON-':
-
+            
             data.export_category_list(categories.data_list)
             break
 
@@ -237,12 +238,15 @@ def income_window():
                 title = values ['-TITLE INPUT-']
                 category = values ['-COMBO-'][0]
                 amount = float(values ['-AMOUNT INPUT-'])
-                account.add_income(amount,category,title)
-                break
+                if amount < 0 :
+                    raise ValueError
+                else:
+                    account.add_income(amount,category,title)
+                    break
             except IndexError:
                 category_exception_window()
             except ValueError:
-                is_not_a_number_window()
+                is_not_a_positive_number_window()
 
     window.close()
 
@@ -276,12 +280,15 @@ def expense_window():
                 title = values ['-TITLE INPUT-']
                 category = values ['-COMBO-'][0]
                 amount = float(values ['-AMOUNT INPUT-'])
-                account.add_expense(amount,category,title)
+                if amount < 0 :
+                    raise ValueError
+                else:
+                    account.add_expense(amount,category,title)
                 break
             except IndexError:
                 category_exception_window()
             except ValueError:
-                is_not_a_number_window()
+                is_not_a_positive_number_window()
 
     window.close()
 
