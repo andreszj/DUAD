@@ -60,7 +60,7 @@ class Account:
         current_movement ['#'] = self.count
         current_movement ['Category'] = category
         current_movement ['Title'] = title
-        current_movement ['Expense'] = 0
+        current_movement ['Expense'] = 0.0
         current_movement ['Income'] = new_income
 
         self.last_transaction = current_movement
@@ -83,7 +83,7 @@ class Account:
         current_movement ['Category'] = category
         current_movement ['Title'] = title
         current_movement ['Expense'] = new_expense
-        current_movement ['Income'] = 0
+        current_movement ['Income'] = 0.0
 
         self.last_transaction = current_movement
         self.transaction.append(current_movement)

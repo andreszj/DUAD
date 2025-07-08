@@ -45,17 +45,17 @@ def is_not_a_positive_number_window():
     window.close()
 
 
-def category_exception_window():
+def category_and_title_exception_window():
 
     sg.theme('Reddit')
 
     layout= [
-    [sg.Text('Selecting a category is a requirement')],
-    [sg.Text('to add a new income or expense.')],
+    [sg.Text('Selecting a category and writing a title ')],
+    [sg.Text('are a requirement to add a new income or expense.')],
     [sg.Button('Accept', size = (15,1),pad=(1,10),key="-ACCEPT BUTTON-")],
     ]
     
-    window = sg.Window("Error", layout,finalize=True, size=(300,120))    
+    window = sg.Window("Error", layout,finalize=True, size=(370,120))    
 
     while True:
 
@@ -238,13 +238,20 @@ def income_window():
                 title = values ['-TITLE INPUT-']
                 category = values ['-COMBO-'][0]
                 amount = float(values ['-AMOUNT INPUT-'])
+                alphanumeric = False
+                for letter in title:
+                    if letter.isalnum():
+                        alphanumeric = True
+                if alphanumeric == False:
+                    raise IndexError
                 if amount < 0 :
                     raise ValueError
                 else:
                     account.add_income(amount,category,title)
+                    alphanumeric = False
                     break
             except IndexError:
-                category_exception_window()
+                category_and_title_exception_window()
             except ValueError:
                 is_not_a_positive_number_window()
 
@@ -280,13 +287,20 @@ def expense_window():
                 title = values ['-TITLE INPUT-']
                 category = values ['-COMBO-'][0]
                 amount = float(values ['-AMOUNT INPUT-'])
+                alphanumeric = False
+                for letter in title:
+                    if letter.isalnum():
+                        alphanumeric = True
+                if alphanumeric == False:
+                    raise IndexError
                 if amount < 0 :
                     raise ValueError
                 else:
                     account.add_expense(amount,category,title)
+                    alphanumeric = False
                 break
             except IndexError:
-                category_exception_window()
+                category_and_title_exception_window()
             except ValueError:
                 is_not_a_positive_number_window()
 
