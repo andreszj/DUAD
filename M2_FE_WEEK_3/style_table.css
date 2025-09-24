@@ -1,0 +1,146 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #ddd;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    align-items: center; 
+    border-left: 0px;
+    border-right: 0px;
+    background-color: white;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    align-items: center; 
+}
+
+.title-table-container {
+    column-width: 33%;
+    background-color: #ddd;
+}
+
+.title-page {
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+.date-page {
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+.table-head-container {
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(54, 54, 243);
+    color: aliceblue;
+    border: 2px solid rgb(54, 54, 243);
+    text-align: center;
+    align-items: center; 
+}
+
+.info-table-container {
+    border-color:white;
+    align-items: center; 
+
+}
+
+.top-number-container{
+    width: 100px;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #ddd;
+    background-color:rgba(0, 0, 0, 0.91);
+    font-weight: 800;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center; 
+    border: 0px;
+    border-bottom: 1px solid #d5cfcf;
+    border-left: 2px solid rgba(0, 0, 0, 0.91);
+}
+
+.top-image-container {
+    padding: 0px;
+    width: 30px;
+
+    cursor: pointer;
+
+    text-align: center;
+    align-items: center; 
+    border: 0px;
+    border-bottom: 1px solid #d5cfcf;
+}
+
+.top-title-container {
+    font-size: 21px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+}
+.up-down-container{
+    width: 75px;
+
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
+.by-container {
+    font-size: 15px;
+    font-weight:100;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.more-info-container{
+    width: 75px;
+
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
+.award-container{
+    width: 75px;
+    background-color: #dddddd9f;
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
+.last-week-top-container{
+    width: 75px;
+    font-size: 20px;
+    font-weight:100;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
+
+.peak-pos-container{
+    width: 75px;
+    background-color: #dddddd9f;
+    font-size: 20px;
+    font-weight:100;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
+
+.wks-on-chart-container{
+    width: 75px;
+    font-size: 20px;
+    font-weight:100;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+}
