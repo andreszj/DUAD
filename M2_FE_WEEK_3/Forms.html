@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="style_form.css" rel="stylesheet" />
+  </head>
+
+  <div class="form_container">
+    <form action="https://dummyjson.com/test" method="POST">
+      <div class="line"></div>
+
+      <h1>Contact us!</h1>
+      <p>Got something to say? Fire away!</p>
+
+      <!-- <label for="first_name">First name</label> -->
+      <br />
+      <input
+        type="text"
+        id="first_name"
+        name="firstName"
+        placeholder="First name *"
+      />
+      <br />
+      <!-- <label for="last_name">Last name</label> -->
+      <br />
+      <input
+        type="text"
+        id="last_name"
+        name="lastName"
+        placeholder="Last name *"
+      />
+      <br />
+      <div class="email-container">
+        <!-- <label for="email">Email</label> -->
+        <br />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email address *"
+        />
+      </div>
+
+      <!-- <label for="type">What's your message about?</label> -->
+      <br />
+      <select name="type" id="type">
+        <option hidden>What's your message about? *</option>
+        <option value="question">Question</option>
+        <option value="suggestion">Suggestion</option>
+      </select>
+      <br />
+      <!-- <label for="message">Fire away!</label> -->
+      <br />
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Fire away! *"
+      ></textarea>
+      <br />
+
+      <input type="submit" value="Send my message" />
+    </form>
+  </div>
+</html>

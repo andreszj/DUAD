@@ -1,0 +1,127 @@
+body {
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 760px;
+    display: block;
+    margin: 0 25% 0 25%;
+    padding-left: 0;
+    
+}
+
+h1, h2, h3 {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: #2d2e2e;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 62px;
+    line-height: 66px;
+    font-weight: 700;
+    margin: 15px auto 0 auto;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #403f3e;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+}
+
+h3 {
+    color: #403f3e;
+    margin-top: 20px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 20px;
+}
+
+.icon-container {
+    margin : 10px;
+}
+
+.media_icon {
+    margin : 10px;
+}
+
+.introduction-container {
+    text-align: justify;
+    background-color:  #f7f5f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    min-height: 1px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+}
+
+.p-container {
+    text-align: justify;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.promote-container {
+    float: right;
+    width: 50%;
+    background-color: #ffbf6e;
+    border-radius: 5px;
+    margin: 20px 0px 20px 20px;
+    padding: 24px;
+    text-align: center;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.promote-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: normal;
+    color: #2d2e2e;
+}
+
+
+.BaseButton {
+
+    background-color: #2d2e2e;
+    border-color:#5dc73f16;
+    color:#fffdf9;
+    align-content: normal;
+    align-items: center;
+    appearance: none;
+    block-size: 50px;
+    
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 30%;
+    opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration-line:none;
+}
