@@ -69,6 +69,10 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
+
+            button:active {
+                background-color: #19181937;
+            }
             .price {
                 margin-top: 1rem;
                 font-weight: bold;

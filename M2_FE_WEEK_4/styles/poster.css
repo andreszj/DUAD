@@ -46,4 +46,9 @@
         border-radius: 5px;
         cursor: pointer;
     }
+
+
+    button:active {
+        background-color: #c71fc737;
+    }
 }

@@ -18,9 +18,14 @@ input {
     border-radius: 3px;
 }
 
-button:active, button:focus {
+button:active {
     font-weight: bold;
 }
+
+button:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
 
 body{
     margin:0;
