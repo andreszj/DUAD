@@ -1,0 +1,40 @@
+.navbar{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: rgba(173, 192, 202, 0.097);
+    
+    .nav-main{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        
+    }
+    .nav-brand{
+        width: min-content;
+        border: none;
+        background: none;
+    }
+    .brand-image {
+        width: 10rem;
+    }
+    .nav-button {
+        margin-right: 0.5rem;
+        border: none;
+        background: none;
+        color: rgba(128, 128, 128, 0.639);
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: #8c929717;
+    }
+    input {
+        width: 100%;
+    }
+
+
+
+}
