@@ -1,0 +1,27 @@
+<html>
+  <head> </head>
+  <body>
+    <button id="add-button">Add Item</button>
+    <button id="clean-button">Clean All</button>
+    <ol id="list"></ol>
+  </body>
+
+  <script>
+    const addButton = document.getElementById("add-button");
+    const cleanButton = document.getElementById("clean-button");
+    const list = document.getElementById("list");
+
+    const addItem = () => {
+      const item = document.createElement("li");
+      item.innerHTML = "Item";
+      list.appendChild(item);
+    };
+
+    const cleanAll = () => {
+      list.innerHTML = "";
+    };
+
+    addButton.addEventListener("click", addItem);
+    cleanButton.addEventListener("click", cleanAll);
+  </script>
+</html>

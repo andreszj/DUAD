@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div>
+      <input
+        type="text"
+        id="new-input"
+        name="newInput"
+        placeholder="Write information"
+      />
+    </div>
+    <div>
+      <button id="add-button">Add</button>
+    </div>
+    <div>
+      <p id="print-data"></p>
+    </div>
+  </body>
+  <script>
+    const addButton = document.getElementById("add-button");
+
+    const writeData = () => {
+      const info = document.getElementById("new-input");
+      const printed = document.getElementById("print-data");
+      printed.innerHTML = info.value;
+      info.value = "";
+    };
+
+    addButton.addEventListener("click", writeData);
+  </script>
+</html>
