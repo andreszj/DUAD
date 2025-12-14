@@ -1,0 +1,60 @@
+<html>
+  <head> </head>
+  <body>
+    <h1>EXERCISE 3 - FORM</h1>
+    <form id="form-container" action="https://dummyjson.com/test" method="POST">
+      <input type="text" id="email" name="email" placeholder="Email *" /><br />
+      <input
+        type="text"
+        id="password"
+        name="password"
+        placeholder="Password *"
+      /><br />
+      <input
+        type="text"
+        id="first_name"
+        name="firstName"
+        placeholder="First name *"
+      /><br />
+      <input
+        type="text"
+        id="last_name"
+        name="lastName"
+        placeholder="Last name *"
+      />
+      <br />
+      <p>Are you an employee?</p>
+      <br />
+      <input type="radio" id="yes_button" name="Employee" value="isEmployee" />
+      <label for="yes_button">YES</label><br />
+      <input
+        type="radio"
+        id="no_button"
+        name="Employee"
+        value="isNotEmployee"
+      />
+      <label for="no_button">NO</label><br />
+    </form>
+  </body>
+  <script>
+    const isEmployee = document.getElementById("yes_button");
+    const isNotEmployee = document.getElementById("no_button");
+    const getForm = document.getElementById("form-container");
+    const newInput = document.createElement("input");
+    newInput.type = "text";
+    newInput.placeholder = "Your position";
+
+    const addEmployeeDescription = () => {
+      if (isEmployee.checked) {
+        getForm.appendChild(newInput);
+      }
+      if (isNotEmployee.checked) {
+        newInput.value = "";
+        getForm.removeChild(newInput);
+      }
+    };
+
+    isEmployee.addEventListener("change", addEmployeeDescription);
+    isNotEmployee.addEventListener("change", addEmployeeDescription);
+  </script>
+</html>
