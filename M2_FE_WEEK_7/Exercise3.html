@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="style_exercise3.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="square">
+      <p id="lorenIpsum" class="baseColor">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+    <button id="buttonColor">Change Background Color!</button>
+  </body>
+  <script>
+    const paragraph = document.getElementById("lorenIpsum");
+    const changeButton = document.getElementById("buttonColor");
+    const arrayColors = ["red", "blue", "green", "yellow", "cyan", "pink"];
+
+    const changeColor = () => {
+      paragraph.className = arrayColors[Math.ceil(Math.random() * 5)];
+    };
+    changeButton.addEventListener("click", changeColor);
+  </script>
+</html>
