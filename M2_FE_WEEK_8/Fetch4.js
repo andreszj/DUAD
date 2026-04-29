@@ -11,7 +11,7 @@ async function getUserAndModify(userID,newAddress) {
     console.log("Data Imported:",data)
     data.data["address"] =newAddress;
     console.log("Modified Data:",data)
-    const response = await fetch(`https://api.restful-api.dev/objects/${userID}`, {
+    const puResponse = await fetch(`https://api.restful-api.dev/objects/${userID}`, {
       method: "PUT",
       headers: {
           "x-api-key": "f2ee4a43-b231-4eea-991c-dc6661dd197c",

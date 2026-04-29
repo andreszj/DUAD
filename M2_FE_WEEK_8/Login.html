@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <form id="loginForm">
+      <input id="userId" placeholder="ID" required />
+      <input id="password" type="password" placeholder="Password" required />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>
+      Don't you have an account?
+      <a href="Register.html">Register</a>
+    </p>
+
+    <p>
+      <a href="Password.html">Change password</a>
+    </p>
+
+    <script>
+      const form = document.getElementById("loginForm");
+
+      function submitLoginForm(event) {
+        event.preventDefault();
+
+        const id = document.getElementById("userId").value;
+        const password = document.getElementById("password").value;
+
+        let users = [];
+        if (localStorage.getItem("users") !== null) {
+          users = JSON.parse(localStorage.getItem("users"));
+        }
+
+        const user = users.find(function (user) {
+          return user.id === id;
+        });
+
+        if (!user) {
+          alert("The user does not exist.");
+          return;
+        }
+
+        if (user.data.password !== password) {
+          alert("Password incorrect");
+          return;
+        }
+
+        localStorage.setItem("sessionUser", JSON.stringify(user));
+
+        window.location.href = "Profile.html";
+      }
+
+      form.addEventListener("submit", submitLoginForm);
+    </script>
+  </body>
+</html>

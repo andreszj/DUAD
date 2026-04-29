@@ -1,12 +1,14 @@
-const getUserData = async () => {
-	console.log("Requesting data...");
-	const response = await fetch(`https://api.restful-api.dev/objects`);
-	console.log("Data retrieved!");
-	return response.json();
+import axios from 'axios';
+
+const getData = async () => {
+	console.log("Loading data...");
+	const response = await axios.get(`https://api.restful-api.dev/objects`);
+	console.log("Data loaded! Returning...");
+	return response.data;
 }
 
-const data = await getUserData();
-// console.log(data);
+const data = await getData();
+console.log(data);
 
 for (const item of data) {
     if (item.data != null) {

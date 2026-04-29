@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>My Profile</h1>
+
+    <div id="profile"></div>
+
+    <button id="logoutBtn">Logout</button>
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("sessionUser"));
+
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        const profile = document.getElementById("profile");
+
+        profile.innerHTML = `
+        <div>
+          <p>ID: ${user.id}</p>
+          <p>Name: ${user.name}</p>
+          <p>Email: ${user.data.email}</p>
+          <p>Address: ${user.data.address}</p>
+        </div>
+      `;
+      }
+
+      const logoutButton = document.getElementById("logoutBtn");
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("sessionUser"); //cierra session
+        window.location.href = "login.html";
+      });
+    </script>
+  </body>
+</html>
