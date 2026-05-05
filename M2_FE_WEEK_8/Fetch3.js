@@ -9,6 +9,7 @@ async function getUser(userID) {
   const status = await response.status;
   if (status === 200) {
     await console.log(data)
+    return data;
   } else {
     throw "Error 404";
     }

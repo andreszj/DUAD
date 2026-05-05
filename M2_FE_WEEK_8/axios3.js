@@ -12,10 +12,19 @@ async function getUser(userID) {
   const status = response.status;
   if (status===200) {
     await console.log(data)
+    return data;
   } 
+
   } catch (error) {
-    console.log(`An error occurred: ${error}`);
+    if (error.response.status ===404){   
+    console.log(`Data not found: Error ${error.response.status}`);
     }
+
+    else {
+      console.log(`Error: ${error.response.status}`);
+    }
+  }
+
 }
 
 
