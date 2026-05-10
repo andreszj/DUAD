@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Register</h1>
+
+    <form id="registerForm">
+      <input id="name" placeholder="Name" />
+      <input id="email" type="email" placeholder="email" />
+      <input id="password" type="password" placeholder="Password" />
+      <input id="address" placeholder="Address" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p>
+      Do you have an account?
+      <a href="login.html">Login</a>
+    </p>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+      const form = document.getElementById("registerForm");
+
+      async function submitForm(event) {
+        event.preventDefault(); //se investiga... hace que el formulario no cargue la pagina de nuevo
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const address = document.getElementById("address").value;
+
+        const body = {
+          name: name,
+          data: {
+            email: email,
+            password: password,
+            address: address,
+          },
+        };
+
+        try {
+          const response = await axios.post(
+            "https://api.restful-api.dev/objects",
+            body,
+          );
+          const user = response.data;
+
+          let users = [];
+          if (localStorage.getItem("users") !== null) {
+            users = JSON.parse(localStorage.getItem("users"));
+          }
+          users.push(user);
+
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("sessionUser", JSON.stringify(user));
+
+          alert(`User created successfully! Your ID: ${user.id}`);
+
+          window.location.href = "Profile.html";
+        } catch (error) {
+          alert("Error:", error);
+        }
+      }
+
+      form.addEventListener("submit", submitForm);
+    </script>
+  </body>
+</html>
