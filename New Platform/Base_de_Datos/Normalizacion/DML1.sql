@@ -1,9 +1,9 @@
 -- SQLite
-INSERT INTO customers_info (customer_name, customer_phone)
-    VALUES
-    ('Alice',1234567890),
-    ('Bob',9876543210),
-    ('Claire',5551234567);
+-- INSERT INTO customers_info (customer_name, customer_phone)
+--     VALUES
+--     ('Alice',1234567890),
+--     ('Bob',9876543210),
+--     ('Claire',5551234567);
 
 
 -- INSERT INTO addresses (address, customer_id)
@@ -30,13 +30,13 @@ INSERT INTO customers_info (customer_name, customer_phone)
 --     ('None'),
 --     ('No croutons');
 
--- INSERT INTO orders (order_number,customer_id,address_id,delivery_time)
---     VALUES
---     (1,1,1,'2026-06-19 18:00:00'),
---     (2,2,2,'2026-06-19 19:30:00'),
---     (2,2,3,'2026-06-19 19:30:00'),
---     (3,3,4,'2026-06-19 12:00:00'),
---     (4,3,5,'2026-06-19 17:00:00');
+INSERT INTO orders (order_number,address_id,delivery_time)
+    VALUES
+    (1,1,'2026-06-19 18:00:00'),
+    (2,2,'2026-06-19 19:30:00'),
+    (2,3,'2026-06-19 19:30:00'),
+    (3,4,'2026-06-19 12:00:00'),
+    (4,5,'2026-06-19 17:00:00');
 
 -- INSERT INTO order_item (order_id,item_id,quantity,request_id)
 --     VALUES 
