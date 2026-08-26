@@ -1,6 +1,6 @@
 SELECT books.Book_Name, authors.Author_Name
     FROM Books AS books
-    INNER JOIN Authors AS authors
+    LEFT JOIN Authors AS authors
     ON books.Author_id = authors.id;
 
 SELECT books.Book_Name, authors.Author_Name
